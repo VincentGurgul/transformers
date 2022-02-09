@@ -14,7 +14,6 @@ __Semester:__ WS 2021/22 <br>
 ├── README.md                     # this readme file
 ├── requirements.txt              # requirements file for the notebook
 └── test_dataset.parquet          # WMT16 test dataset of German-English sentence pairs
-
 ```
 
 ## Contents of the README
