@@ -11,8 +11,8 @@ __Semester:__ WS 2021/22 <br>
 ```
 .
 ├── Keyword_Extraction            # notebook and files on keyword extraction
-├── Machine_Translation           # notebook and files on text generation
-├── Text_Generation               # notebook and files on neural machine translation
+├── Machine_Translation           # notebook and files on neural machine translation
+├── Text_Generation               # notebook and files on text generation
 ├── Transformer_Introduction      # notebook and files on transformers in general
 └── README.md                     # this readme file
 
