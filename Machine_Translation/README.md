@@ -16,7 +16,7 @@ __Semester:__ WS 2021/22 <br>
 └── test_dataset.parquet          # WMT16 test dataset of German-English sentence pairs
 ```
 
-## Contents of the README
+## Contents of this README
 
 ```
 1. Introduction
