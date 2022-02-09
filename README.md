@@ -10,9 +10,10 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 .
-├── README.md                 # this readme file
-├── requirements.txt          # virtualenv requirements file
-├── Keyword_Extraction        # keyword extraction files
-├── Text_Generation           # text generation files
-└── Machine_Translation       # machine translation files
+├── Keyword_Extraction            # notebook and files on keyword extraction
+├── Machine_Translation           # notebook and files on text generation
+├── Text_Generation               # notebook and files on neural machine translation
+├── Transformer_Introduction      # notebook and files on transformers in general
+└── README.md                     # this readme file
+
 ```
