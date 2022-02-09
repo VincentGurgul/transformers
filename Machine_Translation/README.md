@@ -73,7 +73,7 @@ This has led to the recent publishing of the best neural machine translation mod
 
 ## 3. Benchmarks
 
-In the following sections we will look at different model architectures that have been used for machine translation in existing literature. We will compare their BLEU scores on the English-German dataset from the Ninth Workshop on Statistical Machine Translation in 2014, to set a benchmark for what to expect from the modern transformer-based models that are being compared from section 3.3 onwards.
+In the following sections we will look at different model architectures that have been used for machine translation in existing literature. We will compare their BLEU scores on the English-German dataset from the Ninth Workshop on Statistical Machine Translation in 2014, to set a benchmark for what to expect from the modern transformer-based models that are being compared in section 4.
 
 The Workshop on Statistical Machine Translation (WMT) is a series of annual workshops and conferences on statistical machine translation, going back to 2006. Each year various machine translation challenges are published beforehand and evaluated during the conference, including translation of news, chats, biomedical data, low-resource languages and automatic post-editing.
 
