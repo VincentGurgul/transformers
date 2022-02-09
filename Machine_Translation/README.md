@@ -130,8 +130,8 @@ Now, how do these scores compare to what a human translator would achieve? Even 
 The authors of the BLEU metric give an answer to this question in their paper [[Papineni et al., 2001]](#References):
 
 ``` 
-"[...] on a test corpus of about 500 sentences (40 general news stories), a human translator scored 0.3468
-against four references and scored 0.2571 against two references."
+“[...] on a test corpus of about 500 sentences (40 general news stories), a human translator scored 0.3468
+against four references and scored 0.2571 against two references.”
 ```
 
 Therefore, as the WMT news translation datasets only feature one reference translation, a human translator would be expected to achieve a BLEU score of less than 0.2571. This would be less than even some convolution-based networks were able to achieve in 2017. Unfortunately, the paper does not specify the skill level of the translator.
