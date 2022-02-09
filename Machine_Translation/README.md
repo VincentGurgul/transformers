@@ -6,8 +6,6 @@ __Institute:__ Humboldt University Berlin, Chair of Information Systems <br>
 __Lecturer:__ Prof. Dr. Stefan Lessmann <br>
 __Semester:__ WS 2021/22 <br>
 
-<hr style="height:1px; visibility:hidden;" />
-
 ## Contents of this repository
 
 ```
@@ -19,7 +17,7 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 
-<hr style="height:1px; visibility:hidden;" />
+[[Test]](#Papineni)
 
 ## Contents of the README
 
@@ -32,8 +30,6 @@ __Semester:__ WS 2021/22 <br>
 References
 ```
 
-<hr style="height:1px; visibility:hidden;" />
-
 ## 1. Introduction
 
 After decades of development, great achievements have been made in the field of machine translation in recent years with the advent of neural machine translation.
@@ -43,8 +39,6 @@ In this notebook a review of existing literature on machine translation will be 
 Then, language evaluation metrics are introduced and previous machine translation model architectures are presented, that will be used as a benchmark for the Transformer. Those include LSTM networks, CNNs and GRUs.
 
 Finally, five different Transformer-based python libraries for machine translation will be evaluated and compared. The results of the empirical analysis and the advantages and disadvantages of each python package are presented and then possible future improvements of machine translation are discussed.
-
-<hr style="height:1px; visibility:hidden;" />
 
 ## 2. Literature Review
 
@@ -78,11 +72,6 @@ In recent years the Transformer architecture has been applied to ever larger dat
 
 This has led to the recent publishing of the best neural machine translation model to date by Facebook. [[Tran et al., 2021]](#Tran)
 
-
-
-
-<hr style="height:1px; visibility:hidden;" />
-
 ## 3. Results of the Empirical Analysis
 
 |Model|Sentences <br>per minute|BLEU|GLEU|hLepor|F-measure|
@@ -93,13 +82,11 @@ This has led to the recent publishing of the best neural machine translation mod
 |M2M-100-1.2B|27|0.28|0.38|0.76|0.63|
 |mBART50|20|0.27|0.36|0.74|0.62|
 
-<hr style="height:1px; visibility:hidden;" />
+<br>
 
 The WMT19 Winner clearly outperformed the other models, however the superiority in terms of hLepor is lower than in terms of the other measures. It’s hard to recommend it though, because it’s only translating between German and English, and the other winners of the WMT19 translation challenge have not open-sourced their models.
 
 So the best recommendation is the OpusMT model in the C++ implementation. It’s by far the fastest, covers the most languages and still has a slight advantage over the other multilingual models in terms of performance.
-
-<hr style="height:1px; visibility:hidden;" />
 
 ## 4. Discussion
 
@@ -112,8 +99,6 @@ The robustness of machine translation systems also leaves much to be desired. Ev
 Furthermore, machine translation systems require a significantly larger amount of data to learn a language than humans. Although some methods have been proposed to improve the learning of low-resource languages, they remain a significant challenge for machine translation systems.
 
 In summary, there is still room for improvement in machine translation and it can be assumed that many innovations await us in the coming years.
-
-<hr style="height:1px; visibility:hidden;" />
 
 ## 5. Conclusion
 
@@ -128,8 +113,6 @@ While Facebook has repeatedly introduced models in recent years that have raised
 When it comes to many-to-many multilingual translation, Facebook's M2M-100 model has demonstrated good performance. However, it was shown, that the C++ based implementation of OpusMT remains the best open-source option for multilingual machine translation in Python.
 
 Overall, the results demonstrate that neural network based machine translation systems are able to produce translations that can largely compete with human translations within a much shorter span of time than a human would require.
-
-<hr style="height:1px; visibility:hidden;" />
 
 ## References
 
