@@ -17,7 +17,7 @@ __Semester:__ WS 2021/22 <br>
 └── README.md                     # this readme file
 ```
 
-## Introduction
+## Description
 
 This repository contains resources on python libraries for keyword extraction, text generartion and machine translation that are based on transformer networks. 
 
