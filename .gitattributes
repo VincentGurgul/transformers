@@ -1,1 +1,1 @@
-*.txt filter=lfs diff=lfs merge=lfs -text
+/Users/VincentGurgul/Documents/BWL/msc_05/information_systems/repo/Transformer_Introduction/sentence_pairs_for_nmt.txt filter=lfs diff=lfs merge=lfs -text
