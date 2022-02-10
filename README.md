@@ -59,3 +59,5 @@ _… or as .zip file in the top right corner of the GitHub web application_
 __Step 2:__ Open Google Drive and upload the repository
 
 __Step 3:__ Double click on your desired notebook to open Colab
+
+_Note: In Colab, the notebook-internal hyperlinks for the references do not work._
