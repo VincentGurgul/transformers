@@ -2,7 +2,7 @@
 
 # Text Generation with Transformer Networks
 
-__Author:__ Shih-Chi <br>
+__Author:__ Shih-Chi Ma <br>
 __Course:__ Information Systems Seminar <br>
 __Institute:__ Humboldt University Berlin, Chair of Information Systems <br>
 __Lecturer:__ Prof. Dr. Stefan Lessmann <br>
