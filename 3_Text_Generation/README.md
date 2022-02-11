@@ -1,6 +1,6 @@
 # README for Text Generation
 
-# Machine Translation with Transformer Networks
+# Text Generation with Transformer Networks
 
 __Author:__ Shih-Chi <br>
 __Course:__ Information Systems Seminar <br>
