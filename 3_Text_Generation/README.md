@@ -85,7 +85,7 @@ In our experimental setup, we include two models: GPT2 and RNN. The models are g
 
 ## 4. Empirical Results
 
-
+[Results for news data](./Results/news_result.png)
 ## 5. Discussion
 
 
