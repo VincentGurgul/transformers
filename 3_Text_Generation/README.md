@@ -12,10 +12,11 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 .
-├── Text_Generation.ipynb     # jupyter notebook on neural machine translation
-├── README.md                     # this readme file
+├── README.md             # this readme file
+├── Text_Generation.ipynb         # jupyter notebook on neural machine translation
+├── Text_Generation.html         # jupyter notebook in HTML
 ├── preprocessed_data              # 3 preprocessed datasets that are used in the experiments
-└── result_data          # 6 results datasets from the experiments (3 datasets*2 models)
+└── result_data          # 3 results datasets from the experiments and graphs
 ```
 
 ## Contents of this README
