@@ -86,11 +86,11 @@ In our experimental setup, we include two models: GPT2 and RNN. The models are g
 
 ## 4. Empirical Results
 Results for news data: 
-![Results for news data](./Results/news_result.png)
+![BLEU score for all datasets](./Results/BLEU score for all datasets.png)
 Results for netflix data: 
-![Results for netflix data](./Results/netflix_result.png)
+![Counts of Grammar Errors for all datasets](./Results/Counts of Grammar Errors for all datasets.png)
 Results for lyrics data: 
-![Results for lyrics data](./Results/lyrics_result.png)
+![Counts of Misspellings for all datasets](./Results/Counts of Misspellings for all datasets.png)
 
 ## 5. Discussion
 
