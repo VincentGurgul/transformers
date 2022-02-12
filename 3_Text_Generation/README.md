@@ -15,7 +15,7 @@ __Semester:__ WS 2021/22 <br>
 ├── README.md             # this readme file
 ├── Text_Generation.ipynb         # jupyter notebook on neural machine translation
 ├── Text_Generation.html         # jupyter notebook in HTML
-├── preprocessed_data              # 3 preprocessed datasets that are used in the experiments
+├── fine_tune_data              # 3 preprocessed datasets that are used to fine tune the models
 └── result_data          # 3 results datasets from the experiments and graphs
 ```
 
