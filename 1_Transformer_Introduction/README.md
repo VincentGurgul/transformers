@@ -12,17 +12,6 @@ __Semester:__ WS 2021/2022\
 ├── Transformer_Introduction.html      # html version of jupyter notebook on transformer networks in general
 ├── Transformer_Introduction.ipynb     # jupyter notebook on transformer networks in general
 ├── README.md                          # this readme file
-└── test_dataset.parquet          # WMT16 test dataset of German-English sentence pairs
+└── sentence_pairs_for_nmt.txt         # dataset of German-English sentence pairs
 ```
 
-## Contents of this README
-
-```
-1. Introduction
-2. Literature Review
-3. Benchmarks
-4. Results
-5. Discussion
-6. Conclusion
-References
-```
