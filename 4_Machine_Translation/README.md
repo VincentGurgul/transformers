@@ -110,14 +110,14 @@ The authors also test their network on the WMT14 En-De dataset and are able to o
 
 ### Overview
 
-|Paper|Architecture|BLEU WMT14 En-De|
+|Reference|Architecture|BLEU WMT14 En-De|
 |:-|:-|:-|
-|Luong et al. (2015)|Attentional LSTM|0.209|
-|Luong et al. (2015)|Attentional LSTM Ensemble|0.230|
-|Wu et al. (2016)|Attentional LSTM|0.246|
-|Gehring et al. (2017)|Attentional CNN|0.252|
-|Gehring et al. (2017)|Attentional CNN Ensemble|0.264|
-|Vaswani et al. (2017)|Transformer|0.284|
+|[[Luong et al. (2015)]](#References)|Attentional LSTM|0.209|
+|[[Luong et al. (2015)]](#References)|Attentional LSTM Ensemble|0.230|
+|[[Wu et al. (2016)]](#References)|Attentional LSTM|0.246|
+|[[Gehring et al. (2017)]](#References)|Attentional CNN|0.252|
+|[[Gehring et al. (2017)]](#References)|Attentional CNN Ensemble|0.264|
+|[[Vaswani et al. (2017)]](#References)|Transformer|0.284|
 
 <br>
 
