@@ -12,11 +12,11 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 .
-├── README.md             # this readme file
+├── README.md                     # this readme file
 ├── Text_Generation.ipynb         # jupyter notebook on neural machine translation
-├── Text_Generation.html         # jupyter notebook in HTML
-├── fine_tune_data              # 3 preprocessed datasets that are used to fine tune the models
-└── result_data          # 3 results datasets from the experiments and graphs
+├── Text_Generation.html          # jupyter notebook in HTML
+├── fine_tune_data                # 3 preprocessed datasets that are used to fine tune the models
+└── result_data                   # 3 results datasets from the experiments and graphs
 ```
 
 ## Contents of this README
@@ -88,9 +88,9 @@ In our experimental setup, we include two models: GPT2 and RNN. The models are g
 BLEU score: 
 ![BLEU score for all datasets](./Results/BLEU_score_for_all_datasets.png)
 Rate of Grammar Errors: 
-![Rate of Grammar Errors for all datasets](./Results/Counts_of_Grammar_Errors_for_all_datasets.png)
+![Grammar Errors Rate for all datasets](./Results/Grammar_Error_Rate_for_all_datasets.png)
 Rate of Misspellings: 
-![Rate of Misspellings for all datasets](./Results/Counts_of_Misspellings_for_all_datasets.png)
+![Misspellings Rate for all datasets](./Results/Misspelling_Rate_for_all_datasets.png)
 
 ## 5. Discussion
 
