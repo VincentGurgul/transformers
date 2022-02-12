@@ -317,12 +317,3 @@ ACL 2014 Ninth Workshop on Statistical Machine Translation_
 <a id='Wu'>[Wu et al., 2016]</a>
 
 &ensp;&ensp;&ensp; _Wu, Y., Schuster, M., Chen, Z., Le, Q. V., Norouzi, M., Macherey, W., Krikun, M., Cao, Y., Gao, Q., Macherey, K., Klingner, J., Shah, A., Johnson, M., Liu, X., Kaiser, Ł., Gouws, S., Kato, Y., Kudo, T., Kazawa, H., & Stevens, K. (2016). Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation. ArXiv.org. https://arxiv.org/abs/1609.08144_
-
-
-|Model|Languages|Size|Sentences <br>per minute|BLEU|GLEU|hLepor|F-measure|
-|:-|:-|:-|:-|:-|:-|:-|:-|
-|OpusMT (pytorch)|186|300 MB|42|0.29|0.38|0.76|0.63|
-|OpusMT (C++)|186|300 MB|100|0.29|0.38|0.76|0.63|
-|mBART50|52|2.3 GB|20|0.27|0.36|0.74|0.62|
-|M2M-100-1.2B|100|5.0 GB|27|0.28|0.38|0.76|0.63|
-|WMT19 Winner|3|11.9 GB|30|0.37|0.45|0.79|0.68|
