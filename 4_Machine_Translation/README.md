@@ -50,7 +50,9 @@ Despite its anecdotally poor quality, the programme enjoyed high popularity amon
 
 In terms of methodology, there are two approaches to machine translation. The first approach was rule-based translation, which was dominant until 1990. In rule-based translation a bilingual dictionary and manually written rules are used. However, developing those rule-based algorithms is labor intensive and the rules can't be easily transferred from one language to another, making them hard to scale for multilingual translation. [[Wang et al., 2021]](#References)
 
-In 1990, [[Brown et al., 1990]](#References) proposed the concept of statistical machine translation, in which machines learn from a large amount of data instead of relying on human experts to write rules. With the availability of large corpora of bilingual sentence pairs, corpus-based machine translation methods became dominant since then. [[Wang et al., 2021]](#References) In April 2006, the first internet translation service based on statistical machine translation methods was launched by Google. [[Och, 2006]](#References)
+In 1990, [[Brown et al., 1990]](#References) proposed the concept of statistical machine translation, in which machines learn from a large amount of data instead of relying on human experts to write rules. With the availability of large corpora of bilingual sentence pairs, corpus-based machine translation methods became dominant since then. [[Wang et al., 2021]](#References)
+
+In April 2006, the first internet translation service based on statistical machine translation methods was launched by Google. [[Och, 2006]](#References)
 
 The introduction of pivot-based translation was responsible for significant improvements in the translations of low-resource languages. The idea is that the translation from a source to a target languange can be improved by introducing a third language, the pivot language, for which a larger amount of bilingual training is available. [[Wang et al., 2006]](#References)
 
