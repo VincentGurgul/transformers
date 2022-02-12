@@ -87,9 +87,9 @@ In our experimental setup, we include two models: GPT2 and RNN. The models are g
 ## 4. Empirical Results
 BLEU score: 
 ![BLEU score for all datasets](./Results/BLEU_score_for_all_datasets.png)
-Rate of Grammar Errors: 
+Grammar Error Rate: 
 ![Grammar Errors Rate for all datasets](./Results/Grammar_Error_Rate_for_all_datasets.png)
-Rate of Misspellings: 
+Misspellings Rate: 
 ![Misspellings Rate for all datasets](./Results/Misspelling_Rate_for_all_datasets.png)
 
 ## 5. Discussion
