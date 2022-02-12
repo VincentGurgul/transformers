@@ -22,7 +22,7 @@ __Semester:__ WS 2021/22 <br>
 1. Introduction
 2. Literature Review
 3. Benchmarks
-4. Results of the Empirical Analysis
+4. Results
 5. Discussion
 6. Conclusion
 References
@@ -30,13 +30,15 @@ References
 
 ## 1. Introduction
 
-After decades of development, great achievements have been made in the field of machine translation in recent years with the advent of neural machine translation.
+The task of a translator is to express the meaning of a passage of text in a different language. Machine translation is a discipline that studies the performance of this task with the utilisation of digital computers. After decades of development, great achievements have been made in the field of machine translation in recent years with the advent of neural machine translation.
 
 In this notebook a review of existing literature on machine translation will be conducted first. The literature review will include an overview of the history of machine translation and an introduction into the state-of-the-art neural network architecture for machine translation, the Transformer.
 
-Then, language evaluation metrics are introduced and previous machine translation model architectures are presented, that will be used as a benchmark for the Transformer. Those include LSTM networks, CNNs and GRUs.
+Then, language evaluation metrics are introduced and previous machine translation model architectures are presented, that will be used as a benchmark for the Transformer. Those include LSTM networks, CNNs and GLUs.
 
 Finally, five different Transformer-based python libraries for machine translation will be evaluated and compared. The results of the empirical analysis and the advantages and disadvantages of each python package are presented and then possible future improvements of machine translation are discussed.
+
+For a general introduction into the Transformer network and its architecture see our notebook 'Transformer_Introduction.ipynb', which you'll also find on our [Github](https://github.com/VincentGurgul/transformers).
 
 ## 2. Literature Review
 
@@ -137,15 +139,15 @@ against four references and scored 0.2571 against two references.”
 Therefore, as the WMT news translation datasets only feature one reference translation, a human translator would be expected to achieve a BLEU score of less than 0.2571. This would be less than even some convolution-based networks were able to achieve in 2017. Unfortunately, the paper does not specify the skill level of the translator.
 
 
-## 4. Results of the Empirical Analysis
+## 4. Results
 
-|Model|Sentences <br>per minute|BLEU|GLEU|hLepor|F-measure|
-|:-|:-|:-|:-|:-|:-|
-|OpusMT (pytorch)|42|0.29|0.38|0.76|0.63|
-|OpusMT (C++)|100|0.29|0.38|0.76|0.63|
-|M2M-100-1.2B|27|0.28|0.38|0.76|0.63|
-|mBART50|20|0.27|0.36|0.74|0.62|
-|WMT19 Winner|30|0.37|0.45|0.79|0.68|
+|Model|Reference|Languages|Size|Sentences <br>per minute|BLEU|GLEU|hLepor|F-measure|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|42|0.29|0.38|0.76|0.63|
+|OpusMT (C++)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|100|0.29|0.38|0.76|0.63|
+|mBART50|[[Tang et al., 2020]](#Tang)|52|2.3 GB|20|0.27|0.36|0.74|0.62|
+|M2M-100-1.2B|[[Fan et al., 2020]](#Fan)|100|5.0 GB|27|0.28|0.38|0.76|0.63|
+|WMT19 Winner|[[Ng et al., 2019]](#Ng)|3|11.9 GB|30|0.37|0.45|0.79|0.68|
 
 <br>
 
@@ -155,13 +157,19 @@ So the best recommendation is the OpusMT model in the C++ implementation. It’s
 
 ## 5. Discussion
 
-Some metrics can give the impression that computers are better at translation than humans. However, these metrics do not necessarily capture the whole picture. At this point in time, computers can generate very good and fluent translations for some languages. However, the models reach their limits in the area of simultaneous translation, for example.
+Equality of people is based, among other things, on the equal opportunity to access information. This becomes a particularly important goal at a time when digital information channels are becoming the most important way of integrating into modern society. In this context, language barriers can lead to disadvantages and misunderstandings. Machine translation has evolved into an important tool to overcome these language barriers.
+
+Some metrics may even give the impression that computers are better at translation than humans. However, these metrics do not necessarily capture the whole picture. At this point in time, computers can generate very good and fluent translations for some languages. However, the models reach their limits in the area of simultaneous translation or belletrisitic, for example.
 
 In simultaneous translation, the human translator does not have the task of translating everything exactly. He knows what he should focus on and what he can leave out. Machine translation systems, on the other hand, translate everything and are not yet able to skip irrelvant parts in order to reduce the translation time. Furthermore, a human translator is able to account for body language or if a speaker is referencing slides that he presents.
 
-The robustness of machine translation systems also leaves much to be desired. Even a wrong punctuation mark can have a considerable influence on the resulting translation. Humans are still much better at dealing with errors in the source text and correcting them quickly.
+Some translators, when translating Proust's seven-volume work “À la Recherche du Temps Perdu”, have sought to make the first word of the first volume the same as the last word of the last volume because the French original begins and ends with the same word. [[Craig, 2020]](#References)
+
+Translation, then, in its most advanced form, involves close study of the original text and sometimes even the author's life story and circumstances. These are facets that neural machine translation systems are not yet able to conceive.
 
 Furthermore, machine translation systems require a significantly larger amount of data to learn a language than humans. Although some methods have been proposed to improve the learning of low-resource languages, they remain a significant challenge for machine translation systems.
+
+The robustness of machine translation systems also leaves a fair amount to be desired. Even a wrong punctuation mark can have a considerable influence on the resulting translation. Humans are still much better at dealing with errors in the source text and correcting them quickly.
 
 In summary, there is still room for improvement in machine translation and it can be assumed that many innovations await us in the coming years.
 
@@ -179,8 +187,133 @@ When it comes to many-to-many multilingual translation, Facebook's M2M-100 model
 
 Overall, the results demonstrate that neural network based machine translation systems are able to produce translations that can largely compete with human translations within a much shorter span of time than a human would require.
 
-## References
+# References
 
-<a id='Papieni'>[Papineni et al., 2001]</a>
+<a id='Bahdanau'>[Bahdanau et al., 2014]</a>
+
+&ensp;&ensp;&ensp; _Bahdanau, D., Cho, K., & Bengio, Y. (2014). Neural Machine Translation by Jointly Learning to Align and Translate. ArXiv.org. https://arxiv.org/abs/1409.0473_
+
+<a id='Baidu'>[Baidu, 2017]</a>
+
+&ensp;&ensp;&ensp; _Baidu. (2017). WIPO Translate: Terms and Conditions for the Usage and User Guide A. What is it? https://patentscope.wipo.int/translate/wtapta-user-manual-en.pdf_
+
+<a id='Brown'>[Brown et al., 1990]</a>
+
+&ensp;&ensp;&ensp; _Brown, P. F., Cocke, J., Della Pietra, S. A., Della Pietra, V. J., Jelinek, F., Lafferty, J. D., Mercer, R. L., & Roossin, P. S. (1990). A Statistical Approach to Machine Translation. Computational Linguistics, 16(2), 79–85. https://aclanthology.org/J90-2002/_
+
+<a id='Craig'>[Craig, 2020]</a>
+
+&ensp;&ensp;&ensp; _Craig, H. E. (2020). Assessing the English and Spanish translations of Proust’s A la recherche du temps perdu. Peter Lang Publishing, Inc._
+
+<a id='Devlin'>[Devlin et al., 2018]</a>
+
+&ensp;&ensp;&ensp; _Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv.org. https://arxiv.org/abs/1810.04805_
+
+<a id='Dong'>[Dong et al., 2015]</a>
+
+&ensp;&ensp;&ensp; _Dong, D., Wu, H., He, W., Yu, D., & Wang, H. (2015, July 1). Multi-Task Learning for Multiple Language Translation. ACLWeb; Association for Computational Linguistics. https://doi.org/10.3115/v1/P15-1166_
+
+<a id='Fan'>[Fan et al., 2020]</a>
+
+&ensp;&ensp;&ensp; _Fan, A., Bhosale, S., Schwenk, H., Ma, Z., El-Kishky, A., Goyal, S., Baines, M., Celebi, O., Wenzek, G., Chaudhary, V., Goyal, N., Birch, T., Liptchinsky, V., Edunov, S., Grave, E., Auli, M., & Joulin, A. (2020). Beyond English-Centric Multilingual Machine Translation. ArXiv:2010.11125 [Cs]. https://arxiv.org/abs/2010.11125_
+
+<a id='Gehring'>[Gehring et al., 2017]</a>
+
+&ensp;&ensp;&ensp; _Gehring, J., Auli, M., Grangier, D., Yarats, D., & Dauphin, Yann N. (2017). Convolutional Sequence to Sequence Learning. ArXiv.org. https://arxiv.org/abs/1705.03122_
+
+<a id='Han'>[Han et al., 2013]</a>
+
+&ensp;&ensp;&ensp; _Han, F., Wong, D., Mo, D., Chao, L., Lu, Y., Wang, Y., & Zhou, J. (2013). A Description of Tunable Machine Translation Evaluation Systems in WMT13 Metrics Task (pp. 414–421). https://aclanthology.org/W13-2253.pdf_
+
+<a id='History'>[History of Information, n.d.]</a>
+
+&ensp;&ensp;&ensp; _History of Information. (n.d.). The First Public Demonstration of Machine Translation Occurs : History of Information. Www.historyofinformation.com. Retrieved February 8, 2022, from https://www.historyofinformation.com/detail.php?id=666_
+
+<a id='IBM'>[IBM, 1954]</a>
+
+&ensp;&ensp;&ensp; _IBM. (1954, January 8). IBM Archives: 701 Translator. Www.ibm.com. https://www.ibm.com/ibm/history/exhibits/701/701_translator.html_
+
+<a id='Junczys'>[Junczys-Dowmunt et al., 2018]</a>
+
+&ensp;&ensp;&ensp; _Junczys-Dowmunt, M., Grundkiewicz, R., Dwojak, T., Hoang, H., Heafield, K., Neckermann, T., Seide, F., Germann, U., Aji, A. F., Bogoychev, N., Martins, A. F. T., & Birch, A. (2018, July 1). Marian: Fast Neural Machine Translation in C++. ACLWeb; Association for Computational Linguistics. https://doi.org/10.18653/v1/P18-4020_
+
+<a id='Luong'>[Luong et al., 2015]</a>
+
+&ensp;&ensp;&ensp; _Luong, M.-T., Pham, H., & Manning, C. D. (2015). Effective Approaches to Attention-based Neural Machine Translation. ArXiv.org. https://arxiv.org/abs/1508.04025_
+
+<a id='Melamed'>[Melamed et al., 2003]</a>
+
+&ensp;&ensp;&ensp; _Melamed, I. D., Green, R., & Turian, J. P. (2003). Precision and Recall of Machine Translation. ACLWeb. https://aclanthology.org/N03-2021/_
+
+<a id='MUC'>[MUC-4, 1992]</a>
+
+&ensp;&ensp;&ensp; _FOURTH MESSAGE UNDERSTANDING CONFERENCE (MUC-4). (1992). https://www.aclweb.org/anthology/M92-1000.pdf_
+
+<a id='Mutton'>[Mutton et al., 2007]</a>
+
+&ensp;&ensp;&ensp; _Mutton, A., Dras, M., Wan, S., & Dale, R. (2007, June 1). GLEU: Automatic Evaluation of Sentence-Level Fluency. ACLWeb; Association for Computational Linguistics. https://aclanthology.org/P07-1044/_
+
+<a id='Ng'>[Ng et al., 2019]</a>
+
+&ensp;&ensp;&ensp; _Ng, N., Yee, K., Baevski, A., Ott, M., Auli, M., & Edunov, S. (2019). Facebook FAIR’s WMT19 News Translation Task Submission. ArXiv:1907.06616 [Cs]. https://arxiv.org/abs/1907.06616_
+
+<a id='Och'>[Och, 2006]</a>
+
+&ensp;&ensp;&ensp; _Och, F. (2006, April 28). Statistical machine translation live. Google AI Blog. https://ai.googleblog.com/2006/04/statistical-machine-translation-live.html_
+
+<a id='Papineni'>[Papineni et al., 2001]</a>
 
 &ensp;&ensp;&ensp; _Papineni, K., Roukos, S., Ward, T., & Zhu, W.-J. (2001). BLEU. Proceedings of the 40th Annual Meeting on Association for Computational Linguistics - ACL ’02. https://doi.org/10.3115/1073083.1073135_
+
+<a id='Sennrich'>[Sennrich et al., 2015]</a>
+
+&ensp;&ensp;&ensp; _Sennrich, R., Haddow, B., & Birch, A. (2015). Neural Machine Translation of Rare Words with Subword Units. ArXiv.org. https://arxiv.org/abs/1508.07909_
+
+<a id='Sun'>[Sun et al., 2019]</a>
+
+&ensp;&ensp;&ensp; _Sun, Y., Wang, S., Li, Y., Feng, S., Tian, H., Wu, H., & Wang, H. (2019). ERNIE 2.0: A Continual Pre-training Framework for Language Understanding. ArXiv.org. https://arxiv.org/abs/1907.12412_
+
+<a id='Tang'>[Tang et al., 2020]</a>
+
+&ensp;&ensp;&ensp; _Tang, Y., Tran, C., Li, X., Chen, P.-J., Goyal, N., Chaudhary, V., Gu, J., & Fan, A. (2020). Multilingual Translation with Extensible Multilingual Pretraining and Finetuning. ArXiv:2008.00401 [Cs]. https://arxiv.org/abs/2008.00401_
+
+<a id='Tiedemann'>[Tiedemann & Thottingal, 2020]</a>
+
+&ensp;&ensp;&ensp; _Tiedemann, J., & Thottingal, S. (2020, November 1). OPUS-MT – Building open translation services for the World. ACLWeb; European Association for Machine Translation. https://aclanthology.org/2020.eamt-1.61/_
+
+<a id='Tran'>[Tran et al., 2021]</a>
+
+&ensp;&ensp;&ensp; _Tran, C., Bhosale, S., Cross, J., Koehn, P., Edunov, S., & Fan, A. (2021). Facebook AI WMT21 News Translation Task Submission. ArXiv:2108.03265 [Cs]. https://arxiv.org/abs/2108.03265_
+
+<a id='Vaswani'>[Vaswani et al., 2017]</a>
+
+&ensp;&ensp;&ensp; _Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, Aidan N, Kaiser, L., & Polosukhin, I. (2017). Attention Is All You Need. ArXiv.org. https://arxiv.org/abs/1706.03762_
+
+<a id='Wang2021'>[Wang et al., 2021]</a>
+
+&ensp;&ensp;&ensp; _Wang, H., Wu, H., He, Z., Huang, L., & Church, K. W. (2021). Progress in Machine Translation. Engineering. https://doi.org/10.1016/j.eng.2021.03.023_
+
+<a id='Wang2006'>[Wang et al., 2006]</a>
+
+&ensp;&ensp;&ensp; _Wang, H., Wu, H., & Liu, Z. (2006, July 1). Word Alignment for Languages with Scarce Resources Using Bilingual Corpora of Other Language Pairs. ACLWeb; Association for Computational Linguistics. https://aclanthology.org/P06-2112/_
+
+<a id='Weaver'>[Weaver, 1947]</a>
+
+&ensp;&ensp;&ensp; _Weaver, W. (1947, March). Warren Weaver Suggests Applying Cryptanalysis Techniques to Translation : History of Information. Www.historyofinformation.com. https://www.historyofinformation.com/detail.php?id=2990_
+
+<a id='Wikipedia'>[Wikipedia, 2019]</a>
+
+&ensp;&ensp;&ensp; _Wikipedia. (2019, April 19). Precision and Recall. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Precision_and_recall_
+
+<a id='WMT'>[WMT, 2014]</a>
+
+&ensp;&ensp;&ensp; _WMT. (2014, June). Www.statmt.org. https://www.statmt.org/wmt14/
+ACL 2014 Ninth Workshop on Statistical Machine Translation_
+
+<a id='Wolf'>[Wolf et al., 2020]</a>
+
+&ensp;&ensp;&ensp; _Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Ma, C., Jernite, Y., Plu, J., Xu, C., Le Scao, T., Gugger, S., Drame, M., Lhoest, Q., & Rush, A. M. (2020, October 1). Transformers: State-of-the-Art Natural Language Processing. GitHub. https://github.com/huggingface/transformers/blob/master/src/transformers/models/marian/convert_marian_to_pytorch.py_
+
+<a id='Wu'>[Wu et al., 2016]</a>
+
+&ensp;&ensp;&ensp; _Wu, Y., Schuster, M., Chen, Z., Le, Q. V., Norouzi, M., Macherey, W., Krikun, M., Cao, Y., Gao, Q., Macherey, K., Klingner, J., Shah, A., Johnson, M., Liu, X., Kaiser, Ł., Gouws, S., Kato, Y., Kudo, T., Kazawa, H., & Stevens, K. (2016). Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation. ArXiv.org. https://arxiv.org/abs/1609.08144_
