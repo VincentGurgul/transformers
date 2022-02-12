@@ -9,9 +9,9 @@ __Semester:__ WS 2021/2022\
 
 ```
 .
+├── README.md                          # this readme file
 ├── Transformer_Introduction.html      # html version of jupyter notebook on transformer networks in general
 ├── Transformer_Introduction.ipynb     # jupyter notebook on transformer networks in general
-├── README.md                          # this readme file
 └── sentence_pairs_for_nmt.txt         # dataset of German-English sentence pairs
 ```
 
