@@ -12,7 +12,7 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 .
-├── Keyword_extraction.ipynb     # jupyter notebook on keyword extraction
+├── Keyword_Extraction.ipynb     # jupyter notebook on keyword extraction
 ├── README.md                     # this readme file
 ├── kp20k_testing.json                     # dataset used for the evaluation
 └── keyword_extraction_wordwise.py          # Code for running the keyword extraction on CPU with Wordwise
