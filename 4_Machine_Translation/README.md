@@ -143,7 +143,7 @@ Therefore, as the WMT news translation datasets only feature one reference trans
 
 ## 4. Results
 
-|Model|Reference|Languages|Size|Sentences <br>per minute|BLEU|GLEU|hLepor|F-measure|
+|Model|Reference|Languages|Size|Sentences <br>per minute|BLEU WMT16 De-En|GLEU WMT16 De-En|hLepor WMT16 De-En|F-measure WMT16 De-En|
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|42|0.29|0.38|0.76|0.63|
 |OpusMT (C++)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|100|0.29|0.38|0.76|0.63|
