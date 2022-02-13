@@ -15,6 +15,7 @@ __Semester:__ WS 2021/22 <br>
 ├── README.md                     # this readme file
 ├── Text_Generation.ipynb         # jupyter notebook on text generation
 ├── Text_Generation.html          # jupyter notebook in HTML
+├── helper_function.py            # a helper file where functions used the the Text_Generation NB are stored
 ├── fine_tune_data                # 3 preprocessed datasets that are used to fine tune the models + 2 assisting NB for pre-processing
 └── result_data                   # 3 results datasets from the experiments + 3 results graphs
 ```
@@ -63,7 +64,14 @@ On the other hand, there’s also a large body of research on avoiding neural te
     2. After the generation results are produced.
 2. In order to keep the notebook neat, we only show the code on the model part for one dataset, but re-running the cells with a simple comment in/out of the `df_name` will produce results for the other two datasets. In addition, the result files are also uploaded on the github website if skipping running the model part is desired.
 
-In our experimental setup, we include two models: GPT2 and RNN. The models are going to be fine-tuned on three datasets: Business News, Netflix Description and Pop-song Lyrics. Below is an overview on the experiment structure.
+In our experimental setup, we include two models: GPT2 and RNN. The models are going to be fine-tuned on three datasets: 
+1. "[News Aggregator Dataset (only Business news)](https://archive.ics.uci.edu/ml/datasets/News+Aggregator)" from UCI Machine Learning Repository
+2. "[Netflix Dataset](https://www.kaggle.com/nulldata/fine-tuning-gpt-2-to-generate-netlfix-descriptions/data)" from Kaggle
+3. "[Song Lyrics Dataset (only rock songs)](https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres)" from Kaggle
+
+For each dataset, we split it into three subsets: training, validating, and testing. The training and validating datasets are used for fine-tuning the model (GPT2 used both train and val, and RNN used only train), while the testing dataset is used for evaluating purpose. To evaluate the generated text with `BLEU`, we need a reference text for the result to be compared with, thus we split the text in test set into prefix and true-end-text. The prefix then serves as the prompt for the generation to start with, and the true-end-text as the reference text that we compare the generated text with.
+
+Below is an overview of the experiment structure.
 
 **Main Steps**
 - Load in packages and the datasets
@@ -97,6 +105,8 @@ Misspellings Rate:
 From the empirical results, we can see that the BLEU scores from all models and all datasets are essentially zero. BLEU was originally developed to evaluate machine translation, with values closer to one representing more similar texts and to zero otherwise. The aim of BLEU score is to gauge the similarity between the generated and the reference text. Yet, given that the develpoment of the text is not controlled in random text generation, the generated text can be grammatically correct and makes perfect sense but still receives a bad score - due to the generation of a complete different content, as we see from the results of netflix-GPT2. Clearly, despite its popularity among natural language processing tasks, the metric cannot appropriately reflect the model performance in our case. Consequently, we utilized the [`language_tool_python`](https://pypi.org/project/language-tool-python/) package to measure how many grammar errors are carried by the generated text. On top of that, given that lyrics don't necesarrily have strict grammar structures, we took a subset of the grammar error, the number of misspelling, for a better understanding on the lyrics generation. 
 
 With the rate of grammar errors and misspellings, we observed the followings. First, GPT2 outperfroms the RNN model for two out of three datasets, with the average rate of grammar errors and misspellings from the GPT2-generated text being lower than the RNN-generated one. Second, the performance of the generation highly depends on the fine-tuning dataset. The results from GPT2 show high variations in terms of grammatical structures, with netflix model comprising nearly no grammar mistakes and misspellings, and the lyrcis carrying a high rate of mistakes. Two highly possible reasons for this are the informal writing-style of lytics text and the mingling of non-English part of lyrics into the dataset. Both characteristics of the lyrics dataset give rise to the poor performance indication, whereas this doesn't necessarily mean the generation has low quality. Further research on a better metric for this kind of "loose-structured" and "mixed-language" text is needed to give a more objective judgement on the text quality.
+
+Besides, we need to point out that the RNN model in the experiment was a chracter-based model, while the GPT2 generates per token, which is not based on character level. This might as well have an impact on the fairness of the comparison between the two models. For a stricter experiment in the future, an RNN model based on the same tokenizer as GPT2 might be desired.
 
 ## 6. Conclusion
 
