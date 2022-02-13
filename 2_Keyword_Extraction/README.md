@@ -7,15 +7,16 @@ __Course:__ Information Systems Seminar <br>
 __Institute:__ Humboldt University Berlin, Chair of Information Systems <br>
 __Lecturer:__ Prof. Dr. Stefan Lessmann <br>
 __Semester:__ WS 2021/22 <br>
+__Submission Date:__ February 13, 2022 <br>
 
 ## Contents of this repository
 
 ```
 .
-├── Keyword_Extraction.ipynb     # jupyter notebook on keyword extraction
-├── README.md                     # this readme file
-├── kp20k_testing.json                     # dataset used for the evaluation
-└── keyword_extraction_wordwise.py          # Code for running the keyword extraction on CPU with Wordwise
+├── Keyword_Extraction.ipynb            # jupyter notebook on keyword extraction
+├── README.md                           # this readme file
+├── kp20k_testing.json                  # dataset used for the evaluation
+└── keyword_extraction_wordwise.py      # code for running the keyword extraction on CPU with Wordwise
 ```
 
 ## Contents of this README
