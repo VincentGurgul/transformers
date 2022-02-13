@@ -18,7 +18,7 @@ __Submission Date:__ February 13, 2022 <br>
 ├── Text_Generation.html          # jupyter notebook in HTML
 ├── helper_function.py            # a helper file where functions used the the Text_Generation NB are stored
 ├── fine_tune_data                # 3 preprocessed datasets that are used to fine tune the models + 2 assisting NB for pre-processing
-└── result_data                   # 3 results datasets from the experiments + 3 results graphs
+└── Resutls                   # 3 results datasets from the experiments + 3 results graphs
 ```
 
 ## Contents of this README
