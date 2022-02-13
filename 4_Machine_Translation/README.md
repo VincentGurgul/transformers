@@ -37,7 +37,7 @@ In this notebook a review of existing literature on machine translation will be 
 
 Then, language evaluation metrics are introduced and previous machine translation model architectures are presented, that will be used as a benchmark for the Transformer. Those include LSTM networks, CNNs and GLUs.
 
-Finally, five different Transformer-based python libraries for machine translation will be evaluated and compared. The results of the empirical analysis and the advantages and disadvantages of each python package are presented and then possible future improvements of machine translation are discussed.
+Finally, five different Transformer-based python libraries for machine translation will be evaluated and compared. The results of the empirical analysis and the advantages and disadvantages of each python package are presented. Then, possible future improvements of machine translation are discussed.
 
 For a general introduction into the Transformer network and its architecture see our notebook 'Transformer_Introduction.ipynb', which you'll also find on our [Github](https://github.com/VincentGurgul/transformers).
 
@@ -55,11 +55,11 @@ In 1990, [[Brown et al., 1990]](#References) proposed the concept of statistical
 
 In April 2006, the first internet translation service based on statistical machine translation methods was launched by Google. [[Och, 2006]](#References)
 
-The introduction of pivot-based translation was responsible for significant improvements in the translations of low-resource languages. The idea is that the translation from a source to a target languange can be improved by introducing a third language, the pivot language, for which a larger amount of bilingual training is available. [[Wang et al., 2006]](#References)
+The introduction of pivot-based translation was responsible for significant improvements in the translations of low-resource languages. The idea is that the translation from a source to a target languange can be improved by introducing a third language, the pivot language, for which a larger amount of bilingual training data is available. [[Wang et al., 2006]](#References)
 
 With strong progress in deep learning technology in speech, vision, and other fields, researchers began to apply deep learning technology to machine translation. In 2014, [[Bahdanau et al., 2014]](#References) proposed an RNN-based attentional encoder-decoder neural network architecture for machine translation. The encoder maps the source sentence to a real-valued vector or matrix, from which the decoder creates the translation in the target language. In the same paper the authors also introduced the concept of the attention mechanism for the first time and coined the term “neural machine translation”. 
 
-However, this network still had a significant weakness — the out-of-vocabulary problem — where the model is not capable of translating a word it has never encountered before. This problem was solved by [[Sennrich et al., 2015]](#References) with the introduction of byte-pair encoding as a subword-tokenization algorithm. This method made machine translation models capable of open-vocabulary translation by encoding rare and unknown words as sequences of subword units as is used in machine translation until this day.
+However, this network still had a significant weakness — the out-of-vocabulary problem — where the model is not capable of translating a word it has never encountered before. This problem was solved by [[Sennrich et al., 2015]](#References) with the introduction of byte-pair encoding as a subword-tokenization algorithm. This method made machine translation models capable of open-vocabulary translation by encoding rare and unknown words as sequences of subword units and is used in machine translation until this day.
 
 Those advances in the field led to [[Dong et al., 2015]](#References) introducing the first multilingual neural machine translation model based on that attentional encoder-decoder architecture. This model achieved significantly higher translation quality over individually learned models for both high- and low-resource languages, by using a shared encoder.
 
@@ -67,23 +67,23 @@ In 2016, Google followed suit and transitioned their internet translation servic
 
 Different languages have different morphologies and structures, which makes translation among many different languages a very difficult task. Chinese, for example, is a subject-verb-object language, while Japanese is a subject-object-verb language. Therefore, when translating from Chinese to Japanese, long-distance reordering is usually required. This is the most significant challenge for the recurrence-based neural networks that have been used until this point, where information decays rapidly during transmission in the network. [[Wang et al., 2021]](#References)
 
-That issue is resolved with the introduction of the state-of-the-art neural machine translation architecture, the Transformer by [[Vaswani et al., 2017]](#References). The authors refrain from using the Attention mechanism as an intermediate module between the Encoder and the Decoder and instead make it the heart of the network by putting it directly in front of the neural network in every single encoder and decoder block. The Transformer architecture processes all words of the source language simultaneously rather than sequentially, allowing for high parallelization and theoretically infitely long memory. 
+That issue is resolved with the introduction of the state-of-the-art neural machine translation architecture, the Transformer, by [[Vaswani et al., 2017]](#References). The authors refrain from using the Attention mechanism as an intermediate module between the Encoder and the Decoder and instead make it the heart of the network by putting it directly in front of the neural network in every single encoder and decoder block. The Transformer architecture processes all words of the source language simultaneously rather than sequentially, allowing for high parallelization and theoretically infinitely long memory. 
 
 This work has laid the foundation for two important machine translation models: bidirectional encoder representations from transformers (BERT) by Google [[Devlin et al., 2018]](#References) and enhanced representation through knowledge integration (ERNIE) by Baidu. [[Sun et al., 2019]](#References)
 
-In recent years the Transformer architecture has been applied to ever larger datasets and further developed by combining it with methods suchs as pivot-based translation, back-translation and multilingual finetuning.
+In recent years the Transformer architecture has been applied to ever larger datasets and further developed by combining it with methods such as pivot-based translation, back-translation and multilingual finetuning.
 
 This has led to the recent publishing of the best neural machine translation model to date by Facebook. [[Tran et al., 2021]](#References)
 
 ## 3. Benchmarks
 
-In the following sections we will look at different model architectures that have been used for machine translation in existing literature. We will compare their BLEU scores on the English-German dataset from the Ninth Workshop on Statistical Machine Translation in 2014, to set a benchmark for what to expect from the modern transformer-based models that are being compared in section 4.
+In the following section we will look at different model architectures that have been used for machine translation in existing literature. We will compare their BLEU scores on the English-German dataset from the Ninth Workshop on Statistical Machine Translation in 2014, to set a benchmark for what to expect from the modern Transformer-based models that are being compared from section 3.4 onwards.
 
-The Workshop on Statistical Machine Translation (WMT) is a series of annual workshops and conferences on statistical machine translation, going back to 2006. Each year various machine translation challenges are published beforehand and evaluated during the conference, including translation of news, chats, biomedical data, low-resource languages and automatic post-editing.
+The Workshop on Statistical Machine Translation (WMT) is a series of annual workshops and conferences on machine translation, going back to 2006. Each year various machine translation challenges are published beforehand and evaluated during the conference, including translation of news, chats, biomedical data, low-resource languages and automatic post-editing. [[WMT, 2014]](#References)
 
 When publishing a new machine translation model or architecture it has become common among researchers to evaluate it on the WMT news dataset for comparabilities' sake and because it used to be and still is one of the highest quality open-source sets of multilingual sentence pairs.
 
-As the benchmarks are already a couple years old, they were all evaluated on the WMT14 news dataset. We will be evaluating the Python libraries in sections 3.4 onwards on the WMT16 news dataset, because of its larger size and improved quality.
+As the benchmarks are already a couple years old, they were all evaluated on the WMT14 news dataset. We will be evaluating the Python libraries in sections 3.4 onwards on the WMT16 news dataset, because of its larger size and improved quality, but the BLEU values are still comparable.
 
 ### Attentional LSTMs
 
@@ -144,27 +144,61 @@ Therefore, as the WMT news translation datasets only feature one reference trans
 
 ## 4. Results
 
+The first library that is covered is MarianMT/OpusMT. Marian is an open-source tool for training and serving neural machine translation, mostly developed at the University of Edinburgh, Adam Mickiewicz University in Poznań and at Microsoft. [[Junczys-Dowmunt et al., 2018]](#References)
+
+Marian closely follows the transformer structure from [[Vaswani et al., 2017]](#References), but optimized for high training and translation speed by implementing multi-GPU training and batched beam search.
+
+In 2020, the NLP group at the University of Helsinki trained many translation models using Marian on parallel data collected at Opus, and open-sourced those models in cooperation with the European Language Grid under the name OpusMT. [[Tiedemann & Thottingal, 2020]](#References)
+
+The strength of the OpusMT adaptation of MarianMT lies in the use of the open source Opus dataset with 55 million sentence pairs from medicine, natural sciences, legal texts, news, movie subtitles and religious texts. Even though it can translate between 186 languages, each model is only 300 MB large.
+
+The developers of the Huggingface Transformers library for Python have converted OpusMT to the Huggingface pytorch framework. [[Wolf et al., 2020]](#References) In the following, both this pytorch implementation of OpusMT as well as the original one in C++ will be evaluated.
+
+The second model we look at is mBART50, the implementation of Facebook's mBART model for 52 languages. [[Tang et al., 2020]](#References)
+
+mBART-50 is English-centric, i.e. all languages are first translated to English and then from English to another language. For translations in non-English direction the model therefore consists of two stacked transformer networks. This means that it performs best when translating to or from English, where only one transformer network is utilised.
+
+Not only has it been implemented for more languages, it is also outperforming mBART thanks to multilingual finetuning. This means, that even though the model is English-centric, the finetuning was not only done with sentence pairs that included English, but with language pairs from many other different languages.
+
+M2M-100 is the successor of mBART50 with a focus on many-to-many multilingual translation. The model is able to translate between 100 different languages while significantly outperforming its predecessor. [[Fan et al., 2020]](#References)
+
+The main difference: it doesn’t first translate to English, but directly into another language. Therefore it is much better than mBART50 when translating between non-English directions while performing competitively with English.
+
+This model is the first use of back translation by Facebook, i.e. using high-quality monolingual data in the target language for training by automatically translating it into the source language. This method allows the model to pick up on idioms and learn eloquent wordings that might not appear in the bilingual training data.
+
+Apart from that modification in the training process, M2M-100 also follows the “Transformer” neural network architecture from [[Vaswani et al., 2017]](#References).
+
+Facebook has published three versions of M2M-100, one with 418 million parameters (1.8 GB), one with 1.2 billion parameters (5.0 GB) and one with 12 billion parameters (47.9 GB). The small version has significantly underperformed the other models and the large version exceeds the capacity of Colab RAM. Thus, in this notebook we will use the 1.2 billion parameter version.
+
+The last model we look at is the winner of the WMT German-English translation challenge in 2019, also developed by Facebook. The model has been deployed for the translation directions English-German, English-Russian und Russian-English as well. It relies heavily on byte-pair encoding and back-translation with improved sampling methods. [[Ng et al., 2019]](#References)
+
+Byte-pair encoding is splitting rare words into subwords that appear frequently in the training data, thereby improving translation results of compound words. Given the high amount of compound words in the German language this may be one reason for the good performance of the model in the German-English translation challenge.
+
+Back-translation is the concept of using high-quality monolingual data in the target language for training by automatically translating it back into the source language. This method allows the model to pick up on idioms and learn eloquent wordings that might not appear in the lower-quality bilingual training data.
+
+The authors noticed that increasing to amount of data for back-translation doesn't improve the result, because the models start to 'unlearn' information from the biligual training data at some point. That is the reason why the authors decided to focus on improving the sampling methods for the back-translation.
+
+Rather than randomly sampling monolingual data the authors have sampled data that includes many of the words that had high translation loss in earlier training periods. This allowed them to achieve a significant boost in performance.
+
 |Model|Reference|Languages|Size|Sentences <br>per minute|BLEU WMT16 De-En|GLEU WMT16 De-En|hLepor WMT16 De-En|F-measure WMT16 De-En|
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|42|0.29|0.38|0.76|0.63|
-|OpusMT (C++)|[[Tiedemann & Thottingal, 2020]](#Tiedemann)|186|300 MB|100|0.29|0.38|0.76|0.63|
-|mBART50|[[Tang et al., 2020]](#Tang)|52|2.3 GB|20|0.27|0.36|0.74|0.62|
-|M2M-100-1.2B|[[Fan et al., 2020]](#Fan)|100|5.0 GB|27|0.28|0.38|0.76|0.63|
-|WMT19 Winner|[[Ng et al., 2019]](#Ng)|3|11.9 GB|30|0.37|0.45|0.79|0.68|
+|OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#References)|186|300 MB|42|0.29|0.38|0.76|0.63|
+|OpusMT (C++)|[[Tiedemann & Thottingal, 2020]](#References)|186|300 MB|100|0.29|0.38|0.76|0.63|
+|mBART50|[[Tang et al., 2020]](#References)|52|2.3 GB|20|0.27|0.36|0.74|0.62|
+|M2M-100-1.2B|[[Fan et al., 2020]](#References)|100|5.0 GB|27|0.28|0.38|0.76|0.63|
+|WMT19 Winner|[[Ng et al., 2019]](#References)|3|11.9 GB|30|0.37|0.45|0.79|0.68|
 
 <br>
 
 The WMT19 Winner clearly outperformed the other models, however the superiority in terms of hLepor is lower than in terms of the other measures. It’s hard to recommend it though, because it’s only translating between German, English and Russian. The winners of the WMT19 translation challenges for other languages have not open-sourced their models.
 
-Besides that, as opposed to the other multilingual models, the WMT19 winning model from Facebook was trained mostly on the WMT19 training data. This training data will have had many similarities to the WMT16 test dataset that was used for the evaluation in this notebook. Therefore, it may be the case that the model has performed better in our comparison than it would have on a different test dataset. How superior the WMT19 winning model is on a wider variety of linguistic data is thus uncertain.
+Besides that, as opposed to the other multilingual models, the WMT19 winning model from Facebook was trained mostly on the WMT19 training data. This training data will have had many similarities to the WMT16 test dataset that was used for the evaluation in this notebook. Therefore, it may be the case that the model has performed better in our comparison than it would have on a different test dataset. How superior the WMT19 winning model is on a wider variety of linguistic data is uncertain.
 
-Therefore, the best recommendation for multilingual translation is the OpusMT model in the C++ implementation. It’s by far the fastest, covers the most languages and still has a slight advantage over the other multilingual models in terms of performance.
+Thus, the best recommendation for multilingual translation is the OpusMT model in the C++ implementation. It’s by far the fastest, covers the most languages and still has a slight advantage over the other multilingual models in terms of performance.
 
 ## 5. Discussion
 
-Equality of people is based, among other things, on the equal opportunity to access information. This becomes a particularly important goal at a time when digital information channels are becoming the most important way of integrating into modern society. In this context, language barriers can lead to disadvantages and misunderstandings. Machine translation has evolved into an important tool to overcome these language barriers.
-
-Some metrics may even give the impression that computers are better at translation than humans. However, these metrics do not necessarily capture the whole picture. At this point in time, computers can generate very good and fluent translations for some languages. However, the models reach their limits in the area of simultaneous translation or belletrisitic, for example.
+Some metrics may give the impression that computers are better at translation than humans. However, these metrics do not necessarily capture the whole picture. At this point in time, computers can generate very good and fluent translations for some languages. However, the models reach their limits in the area of simultaneous translation or belletrisitic, for example.
 
 In simultaneous translation, the human translator does not have the task of translating everything exactly. He knows what he should focus on and what he can leave out. Machine translation systems, on the other hand, translate everything and are not yet able to skip irrelvant parts in order to reduce the translation time. Furthermore, a human translator is able to account for body language or if a speaker is referencing slides that he presents.
 
@@ -184,7 +218,7 @@ The main purpose of this notebook was to present and evaluate the current state 
 
 In addition to relevant metrics for language evaluation, the architectures of neural networks, that were used for machine transalation before the Transformer, were presented. Those included attentional LSTM networks and attentional convolutional networks. The BLEU scores that the authors of these neural network architectures have been able to achieve were introduced as a benchmark for the performance of the Transformer-based Python libraries.
 
-In the main part, five Transformer-based Python libraries have been presented. Both single sentence and for corpus-level translations have been demonstrated for each model. In this conjunction, language evaluation scores were computed on a dataset of 3000 German-English sentence pairs from the WMT news data translation challenge in 2016, thus displaying the performance of the models on real-world data.
+In the main part, five Transformer-based Python libraries have been presented. Both single sentence and corpus-level translations have been demonstrated for each model. In this conjunction, language evaluation scores were computed on a dataset of 3000 German-English sentence pairs from the WMT news data translation challenge in 2016, thus displaying the performance of the models on real-world data.
 
 While Facebook has repeatedly introduced models in recent years that have raised the bar for scores in the common language evaluation metrics for certain languages in the scope of the WMT conference, they have probably done so primarily in order to profile themselves. These high-performance models are only useful for translation in a handful of languages and therefore cannot be considered the spearhead of neural machine translation in general.
 
