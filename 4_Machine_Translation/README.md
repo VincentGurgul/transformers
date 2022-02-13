@@ -182,13 +182,13 @@ Rather than randomly sampling monolingual data the authors have sampled data tha
 
 The results of the empirical analysis of the performance of each model on the WMT16 news translation challenge test dataset are presented in the table below.
 
-|Model|Reference|Languages|Size|Sentences <br>per minute|BLEU WMT16 De-En|GLEU WMT16 De-En|hLepor WMT16 De-En|F-measure WMT16 De-En|
-|:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#References)|186|300 MB|42|0.29|0.38|0.76|0.63|
-|OpusMT (C++)|[[Tiedemann & Thottingal, 2020]](#References)|186|300 MB|100|0.29|0.38|0.76|0.63|
-|mBART50|[[Tang et al., 2020]](#References)|52|2.3 GB|20|0.27|0.36|0.74|0.62|
-|M2M-100-1.2B|[[Fan et al., 2020]](#References)|100|5.0 GB|27|0.28|0.38|0.76|0.63|
-|WMT19 Winner|[[Ng et al., 2019]](#References)|3|11.9 GB|30|0.37|0.45|0.79|0.68|
+|Model|Languages|Size|Sentences <br>per minute|BLEU WMT16 De-En|GLEU WMT16 De-En|hLepor WMT16 De-En|F-measure WMT16 De-En|
+|:-|:-|:-|:-|:-|:-|:-|:-|
+|OpusMT (pytorch)|186|300 MB|42|0.29|0.38|0.76|0.63|
+|OpusMT (C++)|186|300 MB|100|0.29|0.38|0.76|0.63|
+|mBART50|52|2.3 GB|20|0.27|0.36|0.74|0.62|
+|M2M-100-1.2B|100|5.0 GB|27|0.28|0.38|0.76|0.63|
+|WMT19 Winner|3|11.9 GB|30|0.37|0.45|0.79|0.68|
 
 <br>
 
