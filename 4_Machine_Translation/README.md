@@ -10,6 +10,7 @@ __Semester:__ WS 2021/22 <br>
 
 ```
 .
+├── Machine_Translation.html      # html version of the jupyter notebook on neural machine translation
 ├── Machine_Translation.ipynb     # jupyter notebook on neural machine translation
 ├── README.md                     # this readme file
 ├── requirements.txt              # requirements file for the notebook
