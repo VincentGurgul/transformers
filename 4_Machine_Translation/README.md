@@ -180,6 +180,8 @@ The authors noticed that increasing to amount of data for back-translation doesn
 
 Rather than randomly sampling monolingual data the authors have sampled data that includes many of the words that had high translation loss in earlier training periods. This allowed them to achieve a significant boost in performance.
 
+The results of the empirical analysis of the performance of each model on the WMT16 news translation challenge test dataset are presented in the table below.
+
 |Model|Reference|Languages|Size|Sentences <br>per minute|BLEU WMT16 De-En|GLEU WMT16 De-En|hLepor WMT16 De-En|F-measure WMT16 De-En|
 |:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |OpusMT (pytorch)|[[Tiedemann & Thottingal, 2020]](#References)|186|300 MB|42|0.29|0.38|0.76|0.63|
