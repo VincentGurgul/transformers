@@ -85,7 +85,7 @@ Below is an overview of the experiment structure.
         - Load in previously built ``TextDataset``
         - Construct the simple RNN structure
         - Generate text
-- evaluate the model
+- Evaluate the model
     - BLEU
     - Grammar Check
 
