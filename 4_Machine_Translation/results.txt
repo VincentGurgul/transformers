@@ -1,0 +1,59 @@
+MarianMT/OpusMT (pytorch)
+
+Results over the test dataset:
+
+Translation duration: 1 hour, 11 minutes and 28.9 seconds (1:11:29)
+
+Average BLEU: 0.2867
+Average GLEU: 0.3797
+Average hLepor: 0.7635
+Average F-score: 0.6315
+
+
+MarianMT/OpusMT (C++)
+
+Results over the test dataset:
+
+Translation duration: 29 minutes and 49.4 seconds (0:29:49)
+
+Average BLEU: 0.2870
+Average GLEU: 0.3798
+Average hLepor: 0.7606
+Average F-score: 0.6292
+
+
+mBART50
+
+Results over the test dataset:
+
+Translation duration: 1 hour, 52 minutes and 14.3 seconds (1:52:14)
+
+Average BLEU: 0.2847
+Average GLEU: 0.3771
+Average hLepor: 0.7590
+Average F-score: 0.6259
+
+
+M2M-100-1.2B
+
+Results over the test dataset:
+
+Translation duration: 2 hours, 29 minutes and 38 seconds (2:29:38)
+
+Average BLEU: 0.2661
+Average GLEU: 0.3601
+Average hLepor: 0.7426
+Average F-score: 0.6229
+
+
+WMT19 Winner
+
+Results over the test dataset:
+
+Translation duration: 1 hour, 41 minutes and 25.1 seconds (1:41:25)
+
+Average BLEU: 0.3652
+Average GLEU: 0.4470
+Average hLepor: 0.7913
+Average F-score: 0.6816
+
