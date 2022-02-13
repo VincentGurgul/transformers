@@ -155,6 +155,8 @@ Therefore, as the WMT news translation datasets only feature one reference trans
 
 The WMT19 Winner clearly outperformed the other models, however the superiority in terms of hLepor is lower than in terms of the other measures. It’s hard to recommend it though, because it’s only translating between German, English and Russian. The winners of the WMT19 translation challenges for other languages have not open-sourced their models.
 
+Besides that, as opposed to the other multilingual models, the WMT19 winning model from Facebook was trained mostly on the WMT19 training data. This training data will have had many similarities to the WMT16 test dataset that was used for the evaluation in this notebook. Therefore, it may be the case that the model has performed better in our comparison than it would have on a different test dataset. How superior the WMT19 winning model is on a wider variety of linguistic data is thus uncertain.
+
 Therefore, the best recommendation for multilingual translation is the OpusMT model in the C++ implementation. It’s by far the fastest, covers the most languages and still has a slight advantage over the other multilingual models in terms of performance.
 
 ## 5. Discussion
