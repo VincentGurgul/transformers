@@ -7,6 +7,7 @@ __Course:__ Information Systems Seminar <br>
 __Institute:__ Humboldt University Berlin, Chair of Information Systems <br>
 __Lecturer:__ Prof. Dr. Stefan Lessmann <br>
 __Semester:__ WS 2021/22 <br>
+__Submission Date:__ February 13, 2022 <br>
 
 ## Contents of this repository
 
