@@ -14,6 +14,7 @@ __Semester:__ WS 2021/22 <br>
 ├── Machine_Translation.ipynb     # jupyter notebook on machine translation
 ├── README.md                     # this readme file
 ├── requirements.txt              # requirements file for the notebook
+├── results.txt                   # results of the model comparison as text file
 └── test_dataset.parquet          # WMT16 test dataset of German-English sentence pairs
 ```
 
