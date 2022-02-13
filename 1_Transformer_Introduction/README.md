@@ -1,9 +1,10 @@
 # Introduction to Transformer Networks
 
-__Authors:__ Vincent Gurgul, Shih-Chi Ma, Iliyana Tarpova\
-__Course:__ Information Systems Seminar\
-__Lecturer:__ Prof. Dr. Stefan Lessmann\
-__Semester:__ WS 2021/2022
+__Authors:__ Vincent Gurgul, Shih-Chi Ma, Iliyana Tarpova<br>
+__Course:__ Information Systems Seminar<br>
+__Lecturer:__ Prof. Dr. Stefan Lessmann<br>
+__Semester:__ WS 2021/2022<br>
+__Submission Date:__ February 13, 2022 <br>
 
 ## Contents of this repository
 
