@@ -3,7 +3,7 @@
 __Authors:__ Vincent Gurgul, Shih-Chi Ma, Iliyana Tarpova\
 __Course:__ Information Systems Seminar\
 __Lecturer:__ Prof. Dr. Stefan Lessmann\
-__Semester:__ WS 2021/2022\
+__Semester:__ WS 2021/2022
 
 ## Contents of this repository
 
